@@ -14,7 +14,16 @@ const isPalindrome = word => {
     } else {
         return false;
     }
-
 }
 
-console.log(isPalindrome('otto'))
+const palindrome = word => {
+    let invertedWord = word
+                        .split('')
+                        .reverse()
+                        .join('')
+
+    return word === invertedWord;
+}
+
+//console.log(isPalindrome('otto'))
+console.log(palindrome('ottarnoo'))
